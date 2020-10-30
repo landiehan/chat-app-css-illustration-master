@@ -31,12 +31,12 @@ body {
     height: 100vh;
     margin: 0 auto;
     & > * {
-      margin: 4rem 0;
+      margin: 4rem 6rem;
     }
 
     flex-direction: row-reverse;
-    column-gap: 12rem;
     justify-content: center;
+    // column-gap: 12rem; /** some browsers don't suppert 🙁*/
   }
 }
 
