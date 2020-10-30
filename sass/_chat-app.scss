@@ -71,8 +71,11 @@ section.dialogue {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
   font-size: 1rem;
+  // row-gap: 1rem; /** some browsers don't suppert 🙁*/
+  & > * + * {
+    margin-top: 1rem;
+  }
 
   .message {
     max-width: 65%;
