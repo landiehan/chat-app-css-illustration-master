@@ -32,11 +32,10 @@ body {
     height: 100vh;
     margin: 0 auto;
     flex-direction: row-reverse;
-    column-gap: 12rem;
     justify-content: center;
   }
   .container > * {
-    margin: 4rem 0;
+    margin: 4rem 6rem;
   }
 }
 
