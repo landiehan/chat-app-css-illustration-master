@@ -1,0 +1,85 @@
+section.chat-app {
+  animation: fade-in-up 1s ease-in;
+}
+
+section.dialogue {
+  .message {
+    &--receive {
+      transform-origin: left;
+    }
+    &--send {
+      transform-origin: right;
+    }
+    opacity: 0;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        animation: scale-in 1s .8s * $i forwards;
+      }
+    }
+  }
+}
+
+div.background {
+  &-left {
+    animation: fade-in-down 1.8s ease-in;
+  }
+  &-right {
+    animation: fade-in-up 1.8s ease-in;
+  }
+}
+
+header.head {
+  animation: rotate-in 1s ease-in;
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-up {
+  from {
+    transform: translateY(80vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-in {
+  0% {
+    transform: rotate(360deg) scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(0deg) scale(.6);
+    opacity: .4;
+  }
+}
