@@ -1,0 +1,19 @@
+header.head {
+  h1 {
+    font-size: 4rem;
+    font-weight: $medium;
+    color: $color-text-main-heading;
+  }
+  p {
+    margin-top: 2rem;
+    color: $color-text-para;
+    line-height: 1.8;
+  }
+
+  max-width: 305px;
+  text-align: center;
+  @media screen and (min-width: $bp-small) {
+    max-width: 460px;
+    text-align: unset;
+  }
+}

@@ -1,0 +1,37 @@
+div.background {
+  width: 100vw;
+  height: 75vh;
+  position: absolute;
+  z-index: -1;
+  &-left {
+    background-image: $gradient-tb;
+    border-bottom-left-radius: 100vw;
+    border-bottom-right-radius: 100vw;
+    top: 0;
+    left: -50vw;      
+  }
+  &-right {
+    background-color: $color-background-app;
+    border-top-left-radius: 100vw;
+    border-top-right-radius: 100vw;
+    bottom: 0;
+    right: -50vw;
+  }
+  @media screen and (min-width: $bp-small) {
+    width: 30vw;
+    height: 85vh;
+    position: fixed;
+    &-left {
+      border-bottom-left-radius: 15vw;
+      border-bottom-right-radius: 15vw;
+      top: 0;
+      left: -5vw;      
+    }
+    &-right {
+      border-top-left-radius: 15vw;
+      border-top-right-radius: 15vw;
+      bottom: 0;
+      right: -5vw;
+    }      
+  }
+}
