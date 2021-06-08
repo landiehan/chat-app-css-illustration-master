@@ -1,9 +1,11 @@
-header.head {
+header.header {
+  margin: 3rem 0 5rem;
   h1 {
     font-size: 4rem;
     font-weight: $medium;
     color: $color-text-main-heading;
   }
+
   p {
     margin-top: 2rem;
     color: $color-text-para;

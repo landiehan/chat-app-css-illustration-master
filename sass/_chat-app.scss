@@ -1,4 +1,5 @@
-section.chat-app {
+.chat-app {
+  flex-shrink: 0;
   width: 280px;
   height: 600px;
   border: 1rem solid white;
@@ -9,6 +10,7 @@ section.chat-app {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 5rem 0;
 
   &::before {
     content: '';
@@ -24,8 +26,7 @@ section.chat-app {
   overflow: hidden;
 }
 
-section.chat-app
-div.header {
+.chat-app .header {
   width: 100%;
   height: 7rem;
   padding: 3rem 1rem 1rem;
@@ -42,7 +43,7 @@ div.header {
   div.bio {
     flex: 1;
     display: flex;
-    column-gap: 1rem;
+    // column-gap: 1rem;
     &-wrapper {
       display: flex;
       flex-direction: column;
@@ -53,6 +54,7 @@ div.header {
       height: 3rem;
       border-radius: 50%;
       border: 2px solid white;
+      margin-right: 1rem;
     }
 
     span.name {
@@ -66,8 +68,7 @@ div.header {
   }
 }
 
-section.chat-app
-section.dialogue {
+.chat-app .dialogue {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -96,7 +97,10 @@ section.dialogue {
     }
     &--picture {
       display: flex;
-      column-gap: 1rem;
+      & > * + * {
+        margin-left: 1rem;
+      }
+      // column-gap: 1rem;
       img {
         width: 4rem;
         height: 4rem;   
